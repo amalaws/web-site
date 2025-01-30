@@ -1,0 +1,98 @@
+Visual Breakdown:
+
+1. Login Page:
+
+Header: At the top of the page, you’ll have a centered header with a dark background (#333) and
+ white text that says "Welcome to Ecoomer - The Eco-friendly Marketplace".
+Login Form: Below the header, there's a login form with two input fields: one for the username and
+ one for the password. Both fields have placeholder text: "Enter username" and "Enter password".
+The fields are styled to be full width, with padding to make them easier to use.
+Below the input fields, a green "Login" button is centered. This button will turn a slightly darker 
+shade of green when hovered.
+Basic Styling: The login form has a white background with rounded corners and a subtle shadow for depth.
+
+2. Shop Page (Item Selection):
+
+Header: This is the same header as the login page.
+Items Display: Below the header, there are three items displayed in a 3-column layout:
+
+Item Block: Each item is in a box with an image, a product name (e.g., "Eco Water Bottle"), and the price (e.g., "$15.00").
+Select Item Button: Below each item’s name and price, there is a "Select Item" button that the user can click to choose the item.
+When clicked, it will display the selected item in the "Selected Item" section.
+The items are styled with a white background and a subtle box shadow to give them depth. The images are responsive to the container
+width and maintain their aspect ratio.
+Responsive Layout: The items are displayed as 3 columns on larger screens, but on smaller screens (e.g., mobile), they will stack to a single column.
+
+3. Selected Item Section:
+
+Display Selected Item: When a user selects an item, it will be displayed in the "Selected Item" section. This section 
+has a white background and padding, with a box shadow for a clean and modern look.
+Item Details: The name and price of the selected item will be shown in a paragraph element.
+Buy Button: A "Buy Now" button will appear below the selected item. When clicked, it will display an alert confirming the purchase.
+Hidden by Default: The "Selected Item" section is hidden initially and only becomes visible after an item is selected.
+
+How to Preview the Website Locally:
+To see how the website looks live, you can follow these steps:
+
+
+Set up the files locally:
+
+Create three files: index.html, styles.css, and script.js.
+Copy the HTML, CSS, and JavaScript code I provided into the corresponding files.
+Open the index.html file in a browser:
+
+
+Double-click the index.html file to open it in a web browser.
+
+You should see the login page. 
+
+After entering the correct username and password (admin / password123), you’ll be redirected to the shop page, where you can select an item and proceed to "buy" it.
+
+Example of How It Should Look:
+
+Header:
+
+-----------------------------------
+| Welcome to Ecoomer              |
+| The Eco-friendly Marketplace    |
+-----------------------------------
+
+
+Login Page:
+
+-----------------------------------
+|          Login                  |
+|  ---------------------------    |
+|  | Enter username          |     |
+|  |-------------------------|     |
+|  | Enter password          |     |
+|  |-------------------------|     |
+|  [ Login Button ]              |
+-----------------------------------
+
+
+Shop Page:
+
+-----------------------------------
+|   Our Eco-friendly Products    |
+-----------------------------------
+|   [ Image ]   [ Image ]   [ Image ] |
+|   Eco Bottle  Eco Tote  Eco Notebook |
+|   $15.00      $20.00    $10.00     |
+| [Select]    [Select]   [Select]    |
+-----------------------------------
+
+
+Selected Item Section (When item selected):
+
+
+-----------------------------------
+|        Selected Item           |
+|  You have selected: Eco Bottle |
+|  Price: $15.00                 |
+| [ Buy Now ]                    |
+-----------------------------------
+
+
+
+
