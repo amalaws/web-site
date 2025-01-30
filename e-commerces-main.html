@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecoomer Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+    }
+    .login-container, .shop-container {
+      background-color: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .shop-container h2, .login-container h2 {
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .item {
+      display: inline-block;
+      width: 30%;
+      margin: 10px;
+      text-align: center;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .item img {
+      width: 100%;
+      height: auto;
+    }
+    .item button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Ecoomer - The Eco-friendly Marketplace</h1>
+</header>
+
+<!-- Login Page -->
+<div class="container">
+  <div class="login-container">
+    <h2>Login</h2>
+    <form action="loginAction" method="POST">
+      <input type="text" id="username" name="username" placeholder="Enter username" required>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- Item Selection Page (Shop Page) -->
+<div class="container">
+  <div class="shop-container">
+    <h2>Our Eco-friendly Products</h2>
+    <div class="item">
+      <img src="item1.jpg" alt="Item 1">
+      <h3>Eco Water Bottle</h3>
+      <p>$15.00</p>
+      <button class="btn" onclick="selectItem('Eco Water Bottle', 15)">Select Item</button>
+    </div>
+    <div class="item">
+      <img src="item2.jpg" alt="Item 2">
+      <h3>Recycled Paper Notebook</h3>
+      <p>$10.00</p>
+      <button class="btn" onclick="selectItem('Recycled Paper Notebook', 10)">Select Item</button>
+    </div>
+    <div class="item">
+      <img src="item3.jpg" alt="Item 3">
+      <h3>Organic Cotton Tote</h3>
+      <p>$20.00</p>
+      <button class="btn" onclick="selectItem('Organic Cotton Tote', 20)">Select Item</button>
+    </div>
+  </div>
+</div>
+
+<!-- Selected Item Section -->
+<div class="container" id="selected-item-container" style="display:none;">
+  <div class="shop-container">
+    <h2>Selected Item</h2>
+    <p id="selected-item"></p>
+    <button class="btn" onclick="buyItem()">Buy Now</button>
+  </div>
+</div>
+
+<script>
+  let selectedItem = "";
+
+  // Function to select an item
+  function selectItem(itemName, price) {
+    selectedItem = itemName + " - $" + price;
+    document.getElementById("selected-item").textContent = "You have selected: " + selectedItem;
+    document.getElementById("selected-item-container").style.display = "block";
+  }
+
+  // Function to handle buying an item
+  function buyItem() {
+    alert("You have successfully purchased " + selectedItem);
+    // In a real application, this would trigger payment processing and order confirmation
+  }
+</script>
+
+</body>
+</html>
